@@ -13,6 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById("willCVTab").addEventListener("click", function(event) {
         event.preventDefault();
-        document.getElementById("content").innerText = "Contenu pour WillCV.";
+        maFonctionExterne();
     });
 });

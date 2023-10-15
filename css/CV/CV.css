@@ -1,0 +1,49 @@
+/* Styles pour les sections du CV */
+
+/* Styles pour les titres de section */
+h2 {
+    font-size: 1.5em;
+    color: #000000; /* Couleur bleue pour les titres de section */
+}
+
+/* Styles pour les listes dans la section "Formation" */
+ul {
+    list-style: none;
+}
+
+/* Styles pour les éléments de liste dans la section "Formation" */
+li {
+    margin-bottom: 10px;
+}
+
+/* Styles pour les liens (par exemple, le profil LinkedIn) */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Style pour le lien de profil LinkedIn dans la section "Contact" */
+#contact a {
+    font-weight: bold;
+}
+
+/* Styles pour les compétences techniques */
+#skills ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* Styles pour les projets personnels */
+#projects ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Styles spécifiques pour l'image LinkedIn */
+.linkedin-logo {
+    /* Vos styles pour l'image ici */
+    width: 50px; /* Exemple : définissez la largeur de l'image */
+    height: auto; /* Exemple : maintenez le ratio de l'image */
+    border: none; /* Exemple : supprimez la bordure par défaut */
+}
+
