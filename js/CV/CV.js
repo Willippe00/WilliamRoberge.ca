@@ -1,72 +1,151 @@
 // Dans autre.js
-function maFonctionExterne() {
+function CVDisplay() {
     // Code de votre fonction externe
     //alert("Ceci est une fonction externe !");
+   
     document.getElementById("content").innerHTML = `
         
-    <header>
-    <h1>Votre Nom</h1>
+    <header id="cv-header">
+    <h1>William Roberge</h1>
     <p>Étudiant en génie informatique</p>
-    <p>À la recherche d'un stage</p>
-</header>
+    </header>
 
-<section id="about">
-    <h2>À propos de moi</h2>
-    <p>Étudiant en génie informatique passionné par le développement de logiciels et les technologies de pointe.</p>
-</section>
+    <div class="cv-container">
+        <aside class="sidebar">
+            <!-- Boutons pour la barre latérale -->
+            <button id="about-btn">À propos de moi</button>
+            <button id="education-btn">Formation</button>
+            <button id="skills-btn">Compétences</button>
+            <button id="experience-btn">Formation</button>
+            <button id="projects-btn">Project</button>
+            <button id="contact-btn">Contact</button>
+            
+        </aside>
 
-<section id="education">
-    <h2>Formation</h2>
-    <ul>
-        <li>
-            <h3>Nom de l'université</h3>
-            <p>Programme de génie informatique</p>
-            <p>Date d'obtention prévue : [Mois Année]</p>
-        </li>
-        <!-- Ajoutez d'autres éléments de liste pour chaque formation -->
-    </ul>
-</section>
+        <!-- Contenu Principal -->
+        <main id="main-content">
+            <!-- Les sections seront injectées ici -->
+        </main>
+    </div>
+    
 
-<section id="skills">
-    <h2>Compétences techniques</h2>
-    <ul>
-        <li>Langages de programmation : C++, Python, Java</li>
-        <li>Développement web : HTML, CSS, JavaScript</li>
-        <li>Bases de données : SQL</li>
-        <li>Frameworks : [Ajoutez les frameworks pertinents]</li>
-        <!-- Ajoutez d'autres compétences techniques -->
-    </ul>
-</section>
+        
+        `;
+        attachButtonListeners();
+}
 
-<section id="projects">
-    <h2>Projets personnels</h2>
-    <ul>
-        <li>
-            <h3>Nom du projet 1</h3>
-            <p>Description du projet 1. Mentionnez les technologies utilisées et les réalisations clés.</p>
-        </li>
-        <li>
-            <h3>Nom du projet 2</h3>
-            <p>Description du projet 2. Mentionnez les technologies utilisées et les réalisations clés.</p>
-        </li>
-        <!-- Ajoutez d'autres projets personnels pertinents -->
-    </ul>
-</section>
+function attachButtonListeners() {
+    document.getElementById('about-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Étudiant au Baccalauréat en génie informatique de L’Université de Sherbrooke. Excellent communicateur,
+        sens des priorités et grand intérêt pour tout ce qui touche l’informatique. Langue française de naissance ayant
+        acquis une grande facilité en langue anglaise et espagnole.
+        Principalement orienté vers l&#39;action, le service, la rentabilité et le goût d’apprendre. Capacité démontrée à
+        initier et gérer le changement dans une perspective d&#39;amélioration continue et de croissance. Collaborateur
+        enthousiaste travaillant selon le principe que l’excellence mène au succès.</p>
 
-<section id="contact">
+    
+    </section>
+        `;
+    });
+
+    document.getElementById('education-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="cv-education">
+        <h2>Formation</h2>
+        <ul>
+            <li>
+                <h3>Université de Sherbrooke</h3>
+                <p>Baccalauréat en génie informatique</p>
+                <p>Date d'obtention prévue : 2026</p>
+            </li>
+            <div class="bandeau"></div>
+            <li>
+                <h3>CÉGEP Lionel-Groulx</h3>
+                <p>Sciences, informatique et mathématique</p>
+                <p>2020 - 2022</p>
+            </li>
+            
+        </ul>
+    </section>
+        `;
+    });
+
+    document.getElementById('skills-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="skills">
+        <h2>Compétences techniques</h2>
+        <ul>
+            <li>Langages de programmation : C#, C++, C, java, Python</li>
+            <li>Développement web : HTML, CSS, JavaScript</li>
+            <div class="bandeau"></div>
+            <li>Bases de données : SQL</li>
+            <li>Frameworks : QT, Flask</li>
+            <div class="bandeau"></div>
+            <li>Burautique : Word, PowerPoint, Excel, Git hub, Altium, Teams,  Solid  Work</li>
+        </ul>
+        
+        </section>
+        `;
+    });    
+
+    document.getElementById('experience-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="skills">
+        <h2>Compétences techniques</h2>
+        <ul>
+            <li>Langages de programmation : C#, C++, C, java, Python</li>
+            <li>Développement web : HTML, CSS, JavaScript</li>
+            <li>Bases de données : SQL</li>
+            <li>Frameworks : QT, Flask</li>
+            <li>Burautique : Word, PowerPoint, Excel, Git hub, Altium, Teams,  Solid  Work</li>
+        </ul>
+        </section>
+        `;
+    });    
+
+    document.getElementById('projects-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="skills">
+        <h2>Compétences techniques</h2>
+        <ul>
+            <li>Langages de programmation : C#, C++, C, java, Python</li>
+            <li>Développement web : HTML, CSS, JavaScript</li>
+            <li>Bases de données : SQL</li>
+            <li>Frameworks : QT, Flask</li>
+            <li>Burautique : Word, PowerPoint, Excel, Git hub, Altium, Teams,  Solid  Work</li>
+        </ul>
+        </section>
+        `;
+    });
+    
+    document.getElementById('contact-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        <section id="cv-contact">
     
 
     <section id="contact">
     <h2>Contact</h2>
-    <p>Email : votre@email.com</p>
-    <p>Téléphone : +123456789</p>
+    <p>Email : william.roberge.wr@gmail.com</p>
     <!-- Ajoutez une classe au lien et à l'image LinkedIn -->
     <a href="https://ca.linkedin.com/in/william-roberge-914220290" target="_blank" class="linkedin-link">
         <img src="media/linkedin.png" alt="Logo LinkedIn" class="linkedin-logo">
     </a>
-</section>
 
-
-        
+    <a href="https://github.com/Willippe00" target="_blank" class="github-link">
+        <img src="media/github-mark.png" alt="Logo GitHub" class="Github-logo">
+    </a>
+    </section>
         `;
+    });    
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Configurez ici d'autres gestionnaires pour les onglets ou les boutons initiaux si nécessaire
+    document.getElementById("willCVTab").addEventListener("click", function(event) {
+        event.preventDefault();
+        CVDisplay();
+    });
+});

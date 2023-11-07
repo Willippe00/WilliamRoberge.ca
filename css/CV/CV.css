@@ -4,16 +4,19 @@
 h2 {
     font-size: 1.5em;
     color: #000000; /* Couleur bleue pour les titres de section */
+    font-family: 'Atica', sans-serif;
 }
 
 /* Styles pour les listes dans la section "Formation" */
 ul {
     list-style: none;
+    font-family: 'Atica', sans-serif;
 }
 
 /* Styles pour les éléments de liste dans la section "Formation" */
 li {
     margin-bottom: 10px;
+    font-family: 'Atica', sans-serif;
 }
 
 /* Styles pour les liens (par exemple, le profil LinkedIn) */
@@ -31,19 +34,105 @@ a {
 #skills ul {
     list-style: square;
     padding-left: 20px;
+    font-family: 'Atica', sans-serif;
 }
 
 /* Styles pour les projets personnels */
 #projects ul {
     list-style: disc;
     padding-left: 20px;
+    font-family: 'Atica', sans-serif;
 }
 
 /* Styles spécifiques pour l'image LinkedIn */
-.linkedin-logo {
+.linkedin-logo, .Github-logo {
     /* Vos styles pour l'image ici */
     width: 50px; /* Exemple : définissez la largeur de l'image */
     height: auto; /* Exemple : maintenez le ratio de l'image */
     border: none; /* Exemple : supprimez la bordure par défaut */
 }
 
+#about {
+    background-color: #f5f5f5; /* exemple : changer l'arrière-plan de la section */
+    padding: 20px;
+    border-radius: 31px;
+
+    animation: fadeIn 2s ease 0s 1 normal forwards;;
+    font-family: 'Atica', sans-serif;
+}
+
+@keyframes fadeIn {
+    0% {
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.bandeau{
+    background-color: #4CAF50;
+    height: 30px;
+    width: 50%;
+    animation: slideRight 1s ease-in 0s 1 normal forwards; 
+}
+
+.bandeau.active {
+    animation: monAnimation 5s forwards;
+}
+
+@keyframes slideRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+#cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cv-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+#cv-about, #cv-education, #cv-skills, #cv-projects, #cv-contact {
+    margin-top: 30px;
+}
+
+.education-item:not(:last-child) {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+}
+
+.cv-container {
+    display: flex; /* Utilise Flexbox pour disposer les enfants côte à côte */
+}
+
+.sidebar {
+    flex: 1; /* La barre latérale prend 1 unité de l'espace disponible */
+    /* Vous pouvez donner un width fixe si nécessaire, par exemple: */
+    /* width: 200px; */
+}
+
+#main-content {
+    flex: 3; /* Le contenu principal prend 3 unités de l'espace disponible */
+    /* Ajustez le ratio flex selon le design souhaité */
+    padding: 20px; /* Pour un peu d'espace autour du contenu */
+}

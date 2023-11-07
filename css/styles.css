@@ -1,17 +1,22 @@
-body,  ul {
-
+/* Réinitialisation de certains styles par défaut */
+body, ul {
     background-color: white;
     margin: 0;
     padding: 0;
 }
 
-h1
-{
-
+/* Styles pour les titres */
+h1, h2 {
     margin: 0;
     padding: 0;
 }
 
+h2 {
+    font-size: 1.5em;
+    color: #000000;
+}
+
+/* Styles pour l'en-tête */
 header {
     background-color: #4CAF50;
     color: white;
@@ -19,6 +24,7 @@ header {
     padding: 1em;
 }
 
+/* Styles pour la barre de navigation */
 nav ul {
     list-style-type: none;
     background-color: #333;
@@ -42,8 +48,179 @@ nav a:hover {
     color: black;
 }
 
+/* Clearfix pour le float */
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
+}
+
+/* Styles pour les listes et les liens */
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#contact a {
+    font-weight: bold;
+}
+
+/* Styles pour les compétences et les projets */
+#skills ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+#projects ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Styles pour la section "À propos de moi" */
+#about {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 31px;
+    animation: fadeIn 2s ease 0s 1 normal forwards;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+
+
+
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Styles pour le conteneur principal du CV */
+#cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cv-header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Styles pour chaque section du CV */
+#cv-about, #cv-education, #cv-skills, #cv-projects, #cv-contact {
+    margin-top: 30px;
+}
+
+.education-item:not(:last-child) {
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+}
+
+/* Styles supplémentaires pour les éléments cachés */
+.hidden {
+    display: none;
+}
+
+/* Styles pour les boutons de la barre latérale */
+.sidebar button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border: none;
+    border-left: 3px solid #4CAF50;
+}
+
+.sidebar button:hover {
+    background-color: #ddd;
+}
+
+.under-construction {
+    background-color: #f7f7f7;
+    border-left: 5px solid #ffd700;
+    padding: 20px;
+    margin: 30px 0;
+    text-align: center;
+  }
+  .under-construction h2 {
+    color: #333;
+    margin: 0 0 10px 0;
+  }
+  .under-construction p {
+    color: #666;
+    margin: 0;
+  }
+  .under-construction a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #008cba;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .under-construction a:hover {
+    background-color: #005f6b;
+  }
+
+
+  .under-construction {
+    background-color: #f7f7f7; /* Couleur de fond légère pour s'intégrer avec le reste du design */
+    border-left: 5px solid #4CAF50; /* Bande verticale pour se conformer à la charte graphique */
+    padding: 20px;
+    margin: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère pour la cohérence avec le conteneur du CV */
+}
+
+.under-construction h2 {
+    color: #333; /* Garder la couleur du texte conforme aux titres */
+    margin: 0 0 10px 0;
+}
+
+.under-construction p {
+    color: #666; /* Couleur de texte similaire aux paragraphes existants */
+    margin: 0;
+}
+
+.under-construction a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #4CAF50; /* Utilisation de la couleur primaire de la charte graphique pour le bouton */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px; /* Arrondi des bordures pour rester cohérent avec le style des boutons */
+    transition: background-color 0.3s ease;
+}
+
+.under-construction a:hover {
+    background-color: #367C2B; /* Une teinte plus sombre du vert lors du survol */
 }
