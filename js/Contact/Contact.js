@@ -4,11 +4,11 @@ function ContactDisplay() {
    
     document.getElementById("content").innerHTML = `
         
-        <div class="under-construction">
-            <h2>Section en Cours de Développement</h2>
-            <p>Nous travaillons activement sur le contenu de cette partie du site. Merci de votre patience !</p>
-             <a href="#cv">Consulter l'onglet CV</a>
-        </div>
+    <div class="under-construction">
+    <h2>Section en Cours de Développement</h2>
+    <p>Nous travaillons activement sur le contenu de cette partie du site. Merci de votre patience !</p>
+    <a href="javascript:void(0);" id="goto-cv">Consulter l'onglet CV</a>
+    </div>
         `;
        
 }
