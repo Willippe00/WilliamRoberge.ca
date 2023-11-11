@@ -45,7 +45,7 @@ a {
 }
 
 /* Styles spécifiques pour l'image LinkedIn */
-.linkedin-logo, .Github-logo {
+.linkedin-logo, .Github-logo, .CAE-logo {
     /* Vos styles pour l'image ici */
     width: 50px; /* Exemple : définissez la largeur de l'image */
     height: auto; /* Exemple : maintenez le ratio de l'image */

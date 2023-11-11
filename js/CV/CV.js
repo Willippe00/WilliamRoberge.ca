@@ -17,6 +17,7 @@ function CVDisplay() {
             <button id="education-btn">Formation</button>
             <button id="skills-btn">Compétences</button>
             <button id="experience-btn">Experience</button>
+            <button id="projetScolaire-btn">Projet majeur scolaire</button>
             <button id="projects-btn">Extra-curricular</button>
             <button id="contact-btn">Contact</button>
             
@@ -98,6 +99,9 @@ function attachButtonListeners() {
                 <h3>Premier Stage Professionnel</h3>
                 <p><strong>Durée:</strong> septembre 2023 - décembre 2023</p>
                 <p><strong>Lieu:</strong> Montréal, Canada</p>
+                <a href="https://www.cae.com/fr/" target="_blank" class="linkedin-link">
+                    <img src="media/CAE.png" alt="Logo CAE" class="CAE-logo">
+                </a>
                 <h4>Responsabilités:</h4>
                 <ul>
                     <li>Développement de composants logiciels en C++ pour des simulateurs de vol.</li>
@@ -172,12 +176,76 @@ function attachButtonListeners() {
             <li>Participation au UNITEDCTF 2023</li>
             <li>Qualifié pour le COVEO BLITZ 2024</li>
         </ul>
+        <h3>Impression 3D</h3>
     </div>
 </section>
 
         `;
     });
-    
+
+    document.getElementById('projetScolaire-btn').addEventListener('click', () => {
+        document.getElementById('main-content').innerHTML = `
+        
+        <head>
+    <title>Mes Projets de Fin d'Année</title>
+    <style>
+        .project {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mes Projets de Fin d'Année</h2>
+
+<div class="project">
+    <h3>Jeu 3D avec Unity</h3>
+    <p>
+        Ce projet consistait à développer un jeu en 3D en utilisant le moteur de jeu Unity. 
+        L'aspect innovant du jeu était l'utilisation de la génération procédurale pour créer 
+        des cartes et des environnements dynamiques. Cette approche a permis de générer un 
+        contenu de jeu varié et unique à chaque partie.
+    </p>
+    <a href="https://github.com/Willippe00/ESP--William-Roberge-Benjamin-Lavoie/tree/main" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Robot Arduino</h3>
+        <p>
+            J'ai conçu et construit un robot basé sur la plateforme Arduino. Ce robot était équipé 
+            de plusieurs capteurs et actionneurs pour interagir avec son environnement. 
+            Le projet impliquait également la programmation du microcontrôleur Arduino pour 
+            traiter les signaux des capteurs et contrôler les actionneurs.
+        </p>
+        <a href="https://github.com/Willippe00/Robus---P5" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    <div class="project">
+        <h3>Jeu Vidéo en C++ avec QT</h3>
+        <p>
+            Pour ce projet, j'ai développé un jeu vidéo en C++ en utilisant la bibliothèque QT 
+            pour l'interface graphique. Le jeu était contrôlable via une manette personnalisée 
+            basée sur Arduino. La communication entre la manette et le jeu se faisait par l'envoi 
+            de données JSON sur le port série, permettant une interaction fluide et réactive.
+        </p>
+        
+    </div>
+
+    <div class="project">
+        <h3>Site Web avec API Quarkus, Keycloak et Base de Données SQL</h3>
+        <p>
+        Ce projet comportait le développement d'un site web complet, avec une API back-end Quarkus écrite en Java. 
+        Une attention particulière a été portée sur la sécurité et la gestion des authentifications, intégrant un serveur Keycloak. 
+        De plus, le site interagissait avec une base de données SQL robuste, permettant de gérer efficacement les données utilisateurs et autres informations essentielles. 
+        L'utilisation de Docker pour la conteneurisation des différents composants a grandement facilité le déploiement et la maintenance du système.
+        </p>
+    <a href="https://github.com/EmileBLG/ProjetS3" target="_blank">Voir sur GitHub</a>
+    </div>
+
+    </body>
+        `;
+    });
+
     document.getElementById('contact-btn').addEventListener('click', () => {
         document.getElementById('main-content').innerHTML = `
         <section id="cv-contact">
